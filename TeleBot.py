@@ -8,7 +8,7 @@ from telepot.loop import MessageLoop
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
-led = 21
+led = 16
 
 GPIO.setup(led, GPIO.OUT)
 
@@ -24,7 +24,7 @@ def handle(msg):
     print 'Got command: %s' % command
 
     if command == '/On':
-        bot.sendMessage(chat_id, random.randint(1,6))
+        #bot.sendMessage(chat_id, random.randint(1,6))
         LedOn(5)
     elif command == '/time':
         bot.sendMessage(chat_id, str(datetime.datetime.now()))
