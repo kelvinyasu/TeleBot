@@ -25,9 +25,11 @@ def handle(msg):
 
     if command == '/On':
         #bot.sendMessage(chat_id, random.randint(1,6))
-        LedOn(5)
-    elif command == '/time':
-        bot.sendMessage(chat_id, str(datetime.datetime.now()))
+        #LedOn(5)
+        GPIO.output(led,1)
+    elif command == '/Off':
+        #bot.sendMessage(chat_id, str(datetime.datetime.now()))
+        GPIO.output(led,0)
 
 bot = telepot.Bot('token')
 
