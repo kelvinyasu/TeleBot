@@ -1,4 +1,2 @@
 # TeleBot
-Telegram + RPi
-
-For python 2.7 :(
+Telegram + RPi + Blink(1)
